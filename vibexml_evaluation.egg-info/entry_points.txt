@@ -1,2 +1,0 @@
-[console_scripts]
-vibexml-eval = vibexml_evaluation.run_evaluation:cli_main
