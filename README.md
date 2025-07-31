@@ -2,18 +2,6 @@
 
 An evaluation system for comparing structured (VibeXML) vs unstructured (raw text) data formatting in AI prompts, using LLM-as-a-judge methodology.
 
-## Overview
-
-This framework provides a comprehensive, paper-worthy evaluation of whether structured data formatting (using LLML's VibeXML approach) provides measurable advantages over traditional unstructured text formatting for AI prompt engineering.
-
-### Key Features
-
-- **Research-Grade Methodology**: Uses LLM-as-a-judge for objective evaluation
-- **Comprehensive Test Cases**: Carefully designed scenarios where structure should matter
-- **Model Agnostic**: Works with any model available through OpenRouter
-- **Detailed Analysis**: Multi-criteria scoring with statistical analysis
-- **Reproducible Results**: Saves complete evaluation data for peer review
-
 ## Architecture
 
 ```
@@ -119,7 +107,7 @@ Each test case includes:
 
 ## Recommended Model Combinations
 
-### For Research Papers
+### For Research
 ```bash
 # Different model families (reduces bias)
 --model anthropic/claude-3.5-sonnet --judge openai/gpt-4o
