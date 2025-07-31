@@ -1,0 +1,11 @@
+pydantic-ai-slim[openai]>=0.0.14
+zenbase-llml>=0.3.0
+numpy>=1.21.0
+scipy>=1.7.0
+
+[dev]
+pytest>=7.0.0
+black>=22.0.0
+isort>=5.10.0
+flake8>=4.0.0
+mypy>=0.950

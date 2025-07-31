@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vibexml-evaluation"
+version = "1.0.0"
+description = "A comprehensive evaluation framework for comparing structured (VibeXML) vs unstructured (raw text) data formatting in AI prompts using LLM-as-a-judge methodology"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "LLML Research Team"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Markup :: XML",
+]
+keywords = ["llm", "evaluation", "vibexml", "pydantic", "ai", "research"]
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic-ai-slim[openai]>=0.0.14",
+    "zenbase-llml>=0.3.0",
+    "numpy>=1.21.0",
+    "scipy>=1.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+]
+
+[project.scripts]
+vibexml-eval = "vibexml_evaluation.run_evaluation:cli_main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vibexml_evaluation*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
